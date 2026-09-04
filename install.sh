@@ -19,8 +19,18 @@ mkdir -p "$INSTALL_DIR"
 
 # Copia i file principali
 cp "$SRC_DIR/backlink_monitor.py" "$INSTALL_DIR/"
-cp "$SRC_DIR/config.json" "$INSTALL_DIR/"
 cp "$SRC_DIR/requirements.txt" "$INSTALL_DIR/"
+
+# Usa config.json se esiste (es. repo clonato con config locale),
+# altrimenti genera config.json da config.json.example.
+if [ -f "$SRC_DIR/config.json" ]; then
+    cp "$SRC_DIR/config.json" "$INSTALL_DIR/config.json"
+else
+    cp "$SRC_DIR/config.json.example" "$INSTALL_DIR/config.json"
+    echo ""
+    echo "==> ATTENZIONE: creato $INSTALL_DIR/config.json da config.json.example."
+    echo "    Ricordati di inserire la tua App Password Gmail prima di avviare il timer."
+fi
 
 # Permessi restrittivi: solo l'utente del servizio può leggere la config
 chmod 750 "$INSTALL_DIR"

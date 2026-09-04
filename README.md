@@ -24,6 +24,14 @@ Supporta anche l'invio di un report periodico quando tutto è ok.
 
 ```bash
 cd /percorso/del/progetto
+
+# Crea la tua configurazione locale (non viene versionata)
+cp config.json.example config.json
+
+# Modifica la configurazione con la tua App Password Gmail
+nano config.json
+
+# Installa
 sudo ./install.sh
 ```
 
@@ -33,6 +41,8 @@ Lo script:
 - crea un utente sistema dedicato `backlinkmon`;
 - installa il servizio e il timer systemd;
 - **non avvia** il timer finché non hai configurato l'SMTP.
+
+> **Nota:** `config.json` è nel `.gitignore` e non deve essere versionato, perché contiene la password SMTP.
 
 ## Configurazione
 
