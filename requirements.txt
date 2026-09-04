@@ -1,0 +1,2 @@
+# Nessuna dipendenza esterna richiesta.
+# Il tool utilizza solo la libreria standard di Python 3.

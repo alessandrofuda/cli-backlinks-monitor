@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Backlink Monitor every 3 days
+Requires=backlink-monitor.service
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=3d
+Persistent=true
+
+[Install]
+WantedBy=timers.target

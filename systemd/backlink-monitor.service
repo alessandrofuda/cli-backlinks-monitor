@@ -1,0 +1,12 @@
+[Unit]
+Description=Backlink Monitor
+After=network.target
+
+[Service]
+Type=oneshot
+User=backlinkmon
+Group=backlinkmon
+WorkingDirectory=/opt/backlink-monitor
+ExecStart=/usr/bin/python3 /opt/backlink-monitor/backlink_monitor.py run
+StandardOutput=journal
+StandardError=journal
