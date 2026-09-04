@@ -1,7 +1,7 @@
 {
-  "target": "https://longtermemory.com",
+  "target": "https://example.com",
   "recipients": [
-    "alessandro.fuda@gmail.com"
+    "example@example.com"
   ],
   "smtp": {
     "host": "smtp.gmail.com",
