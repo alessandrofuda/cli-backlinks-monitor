@@ -1,6 +1,6 @@
 # Backlink Monitor
 
-Tool CLI leggero per monitorare i backlink da siti esterni a [https://longtermemory.com](https://longtermemory.com).
+Tool CLI leggero per monitorare i backlink da siti esterni al tuo sito target.
 
 Se un backlink scompare o la pagina esterna non è raggiungibile, invia un alert email.  
 Supporta anche l'invio di un report periodico quando tutto è ok.
@@ -65,8 +65,8 @@ Esempio configurazione:
 
 ```json
 {
-  "target": "https://longtermemory.com",
-  "recipients": ["alessandro.fuda@gmail.com"],
+  "target": "https://target-site.com",
+  "recipients": ["my-address@gmail.com"],
   "smtp": {
     "host": "smtp.gmail.com",
     "port": 587,

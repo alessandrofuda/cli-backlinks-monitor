@@ -2,7 +2,7 @@
 """
 Backlink Monitor CLI
 
-Monitora i backlink da siti esterni a https://longtermemory.com.
+Monitora i backlink da siti esterni al tuo sito target.
 Se un backlink manca o la pagina non è raggiungibile, invia un alert email.
 Supporta report periodici anche quando tutto è ok.
 """
@@ -22,8 +22,8 @@ from urllib.parse import urlparse
 
 
 DEFAULT_CONFIG = {
-    "target": "https://longtermemory.com",
-    "recipients": ["alessandro.fuda@gmail.com"],
+    "target": "https://mysite.com",
+    "recipients": ["my-address@example.com"],
     "smtp": {
         "host": "smtp.gmail.com",
         "port": 587,
